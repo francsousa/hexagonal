@@ -23,6 +23,4 @@ public class FindAddressByZipCodeAdapter implements FindAddressByZipCodeOutputPo
 		return addressResponseMapper.toAddress(addressResponse);
 	}
 	
-	
-
 }
