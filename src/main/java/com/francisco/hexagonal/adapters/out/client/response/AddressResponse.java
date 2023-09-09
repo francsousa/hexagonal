@@ -1,4 +1,4 @@
-package com.francisco.hexagonal.adapters.out.client.resonse;
+package com.francisco.hexagonal.adapters.out.client.response;
 
 import lombok.Data;
 
