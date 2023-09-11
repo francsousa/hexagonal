@@ -4,6 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 import com.francisco.hexagonal.adapters.in.controller.request.CustomerRequest;
+import com.francisco.hexagonal.adapters.in.controller.response.CustomerResponse;
 import com.francisco.hexagonal.application.core.domain.Customer;
 
 @Mapper(componentModel = "spring")
@@ -13,5 +14,7 @@ public interface CustomerMapper {
 	@Mapping(target = "address", ignore = true)
 	@Mapping(target = "isValidCpf", ignore = true)
 	Customer toCustomer(CustomerRequest customerRequest);
+	
+	CustomerResponse toCustomerResponse(Customer customer);
 
 }
