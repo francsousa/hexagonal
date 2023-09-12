@@ -51,7 +51,7 @@ public class CustomerController {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Void> update(@PathVariable final String id, CustomerRequest customerRequest) {
+	public ResponseEntity<Void> update(@PathVariable final String id, @Valid @RequestBody CustomerRequest customerRequest) {
 		Customer customer = customerMapper.toCustomer(customerRequest);
 		customer.setId(id);
 		updateCustomerInputPort.update(customer, customerRequest.getZipCode());
