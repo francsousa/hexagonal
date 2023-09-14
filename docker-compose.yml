@@ -1,0 +1,8 @@
+services:
+  wiremock:
+    container_name: wiremock-sts
+    image: wiremock/wiremock:latest
+    ports:
+      - "8082:8080"
+    volumes:
+      - ./mappings:/home/wiremock/mappings
